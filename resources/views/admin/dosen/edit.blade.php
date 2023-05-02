@@ -1,6 +1,6 @@
 @extends('admin.layouts')
 
-@section('page-title', 'Form Tambah Mahasiswa')
+@section('page-title', 'Form Ubah Dosen')
 
 @section('content')
     <div class="col-lg-8">

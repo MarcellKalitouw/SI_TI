@@ -20,7 +20,11 @@
     <link href="{{ asset('landPage/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landPage/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('landPage/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
-
+    <link href="{{  asset ('NiceAdmin/assets/vendor/simple-datatables/style.css') }}" rel="stylesheet">
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('landPage/css/bootstrap.min.css') }}" rel="stylesheet">
 

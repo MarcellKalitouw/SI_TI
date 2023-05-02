@@ -28,16 +28,27 @@ use App\Http\Controllers\{
 
 // });
 
+Route::middleware(['auth'])->group(function () {
+    Route::resource('data-mahasiswa', MahasiswaController::class);
+    Route::resource('data-kegiatan', KegiatanController::class);
+    Route::resource('data-dosen', DosenController::class);
+    Route::resource('data-profil', ProfilController::class);
+    Route::resource('data-tentang', TentangController::class);
+    Route::resource('data-pengguna', PenggunaController::class);
+});
+
 Route::get('/', [LandingPageController::class, 'home'])->name('home');
+Route::get('profil', [LandingPageController::class, 'profil'])->name('profil');
+Route::get('mahasiswa', [LandingPageController::class, 'mahasiswa'])->name('mahasiswa');
+Route::get('dosen', [LandingPageController::class, 'dosen'])->name('dosen');
+Route::get('kegiatan', [LandingPageController::class, 'kegiatan'])->name('kegiatan');
+Route::get('kegiatan/{id}', [LandingPageController::class, 'detail_kegiatan'])->name('detail-kegiatan');
 
 Route::resource('dashboard', DashboardController::class);
 
-Route::resource('data-mahasiswa', MahasiswaController::class);
-Route::resource('data-kegiatan', KegiatanController::class);
-Route::resource('data-dosen', DosenController::class);
-Route::resource('data-profil', ProfilController::class);
-Route::resource('data-tentang', TentangController::class);
-Route::resource('data-pengguna', PenggunaController::class);
 
-Route::get('page-login', [LoginController::class, 'index'] )->name('login.index');
-Route::post('post-login', [LoginController::class, 'post'] )->name('login.post');
+
+Route::get('page-login', [LoginController::class, 'index'] )->name('login');
+Route::post('post-login', [LoginController::class, 'postLogin'] )->name('login.post');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout.post');

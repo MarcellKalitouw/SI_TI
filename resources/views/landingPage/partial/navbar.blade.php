@@ -10,11 +10,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Profil</a>
-                        <a href="service.html" class="nav-item nav-link">Mahasiswa</a>
-                        <a href="project.html" class="nav-item nav-link">Dosen</a>
-                        <a href="project.html" class="nav-item nav-link">Kegiatan</a>
+                        <a href="{{ route('home') }} " class="nav-item nav-link {{ request()->is('home') ? 'active' : '' }} ">Home</a>
+                        <a href="{{ route('profil') }}" class="nav-item nav-link {{ request()->is('profil') ? 'active' : '' }}">Profil</a>
+                        <a href="{{ route('mahasiswa') }}" class="nav-item nav-link {{ request()->is('mahasiswa') ? 'active' : '' }}">Mahasiswa</a>
+                        <a href="{{ route('dosen') }}" class="nav-item nav-link {{ request()->is('dosen') ? 'active' : '' }}">Dosen</a>
+                        <a href="{{ route('kegiatan') }}" class="nav-item nav-link {{ request()->is('kegiatan') ? 'active' : '' }}">Kegiatan</a>
+                        <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">

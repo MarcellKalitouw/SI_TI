@@ -49,9 +49,13 @@
                           {{ $item->nama }} <br>
                           {{ $item->ttl }} <br>
                           {{ $item->email }} <br>
-                          {{ $item->wa }} <br>
-                          {{ $item->ig }} <br>
-                          {{ $item->fb }} <br>
+                          {{-- {{ $item->wa }} <br> --}}
+                          <i class="bi bi-whatsapp"></i>
+                          <a href="https://wa.me/{{ $item->wa}}">{{ $item->wa }}</a> <br>
+                          <i class="bi bi-instagram"></i>
+                          <a href="https://www.instagram.com/{{ $item->ig }}">{{ $item->ig }}</a> <br>
+                          <i class="bi bi-facebook"></i>
+                          <a href="https://web.facebook.com/{{ $item->fb}}">{{ $item->fb }}</a> <br>
 
                         </td>
                         <td>{{ $item->nidn }}</td>

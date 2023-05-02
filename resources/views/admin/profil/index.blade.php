@@ -1,6 +1,6 @@
 @extends('admin.layouts')
 
-@section('page-title', 'Data Mahasiswa')
+@section('page-title', 'Data Profil')
 
 @section('content')
     <section class="section">
@@ -71,7 +71,7 @@
                             <i class="bi bi-facebook"></i>
                             <a href="https://web.facebook.com/{{ $item->fb}}">{{ $item->fb }}</a> <br>
                             <i class="bi bi-linkedin"></i>
-                            <a href="linkedin.com/in/{{ $item->fb}}/">{{ $item->linkedin }}</a> 
+                            <a href="https://linkedin.com/in/{{ $item->fb}}/">{{ $item->linkedin }}</a> 
                         </td>
                         
                         <td>

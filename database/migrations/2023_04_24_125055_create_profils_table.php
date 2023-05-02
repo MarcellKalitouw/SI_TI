@@ -18,6 +18,9 @@ class CreateProfilsTable extends Migration
             $table->text('visi');
             $table->text('misi');
             $table->integer('igGambar');
+            $table->string('ig', 150);
+            $table->string('fb', 150);
+            $table->string('linkedin', 150);
             $table->timestamps();
         });
     }

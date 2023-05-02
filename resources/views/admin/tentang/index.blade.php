@@ -1,6 +1,6 @@
 @extends('admin.layouts')
 
-@section('page-title', 'Data Mahasiswa')
+@section('page-title', 'Data Tentang')
 
 @section('content')
     <section class="section">
@@ -9,11 +9,15 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">{{ $title }} - 
-                  <a href="{{ route('data-tentang.create') }}" class="btn btn-success">
-                    <i class="bi bi-file-earmark-plus"></i>
-                    Tambah Data
-                  </a>
+              <h5 class="card-title">{{ $title }} 
+                  @if ($data->count() < 1)
+                    - <a href="{{ route('data-tentang.create') }}" class="btn btn-success">
+                      <i class="bi bi-file-earmark-plus"></i>
+                      Tambah Data
+                    </a>  
+                  @else
+                    <a href=""></a>
+                  @endif
               </h5>
               
               <!-- Table with stripped rows -->
